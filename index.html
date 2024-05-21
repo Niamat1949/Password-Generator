@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Password Generator</title>
+   <link rel="stylesheet" href="./index.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poetsen+One&display=swap"
+      rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Permanent+Marker&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+   <header>
+      <nav>
+         <img src="./mot-de-passe.png" alt="motdepasse">
+         <button onclick="darklight()" id="darklight" class="material-symbols-outlined icon">
+            toggle_on
+         </button>
+      </nav>
+   </header>
+   <main>
+      <section class="container" id="section">
+         <h1>Password Generator</h1>
+         <div class="inputcont">
+            <input type="text" id="passinp" class="passinp" readonly placeholder="Generate a password">
+            <button class="material-icons icon" id="copyicon" onclick="Copy()" title="copy">
+               content_copy
+            </button>
+         </div>
+         <input type="range" id="range" min="5" max="40" value="12" oninput="valueof()">
+         <div class="row">
+            <label for="passlength">Password length</label>
+            <span id="passlength"></span>
+         </div>
+         <div class="row">
+            <label for="uppercase">Include Uppercase letters</label>
+            <input type="checkbox" class="checkbox" name="uppercase" id="uppercase" checked>
+         </div>
+         <div class="row">
+            <label for="lowercase">Include Lowercase letters</label>
+            <input type="checkbox" class="checkbox" name="lowercase" id="lowercase" checked>
+         </div>
+         <div class="row">
+            <label for="numbers">Include Numbers</label>
+            <input type="checkbox" class="checkbox" name="numbers" id="numbers" checked>
+         </div>
+         <div class="row">
+            <label for="symbols">Include Symbols</label>
+            <input type="checkbox" class="checkbox" name="symbols" id="symbols" checked>
+         </div>
+         <input type="button" class="btn" id="btn" value="Generate Password" onclick="generate()">
+      </section>
+   </main>
+   <script src="./index.js"></script>
+</body>
+
+</html>
